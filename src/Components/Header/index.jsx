@@ -16,13 +16,23 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { keyframes } from "@mui/system";
+
+const bounceAnimation = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+`;
 
 const drawerWidth = 240;
 const navItems = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Projects", path: "/projects" },
-  { label: "Contact", path: "/contact" }
+  { label: "Contact", path: "/contact" },
 ];
 
 function MobNavbar(props) {
@@ -58,7 +68,7 @@ function MobNavbar(props) {
                   color: "#f7f7fc",
                   fontSize: "12px",
                   fontWeight: "600",
-                  textTransform: "capitalize"
+                  textTransform: "capitalize",
                 }}
               />
             </ListItemButton>
@@ -77,7 +87,7 @@ function MobNavbar(props) {
       <AppBar
         component="nav"
         sx={{
-          backgroundImage: "linear-gradient(to right, #4f0629, #a995aa)"
+          backgroundImage: "linear-gradient(to right, #4f0629, #a995aa)",
         }}
       >
         <Toolbar>
@@ -97,7 +107,9 @@ function MobNavbar(props) {
             fontWeight={800}
             sx={{
               flexGrow: 1,
-              display: { xs: "none", sm: "block", color: "#acacad" }
+              display: { xs: "none", sm: "block", color: "#acacad" },
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+              animation: `${bounceAnimation} 1s ease infinite`,
             }}
           >
             R-Portfolio
@@ -110,7 +122,12 @@ function MobNavbar(props) {
                   color: "#f7f7fc",
                   fontSize: "16px",
                   fontWeight: "600",
-                  textTransform: "capitalize"
+                  textTransform: "capitalize",
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+                  // transition: "color 0.3s ease-in-out", // Adding a transition for color change
+                  "&:hover": {
+                    scale: "1.1",
+                  },
                 }}
               >
                 <Link to={item.path} className={styles.link}>
@@ -128,7 +145,7 @@ function MobNavbar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true // Better open performance on mobile.
+            keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -136,7 +153,7 @@ function MobNavbar(props) {
               boxSizing: "border-box",
               width: drawerWidth,
               backgroundImage: "linear-gradient(to right, #4f0629, #a995aa)",
-            }
+            },
           }}
         >
           {drawer}
@@ -150,7 +167,7 @@ function MobNavbar(props) {
 }
 
 MobNavbar.propTypes = {
-  window: PropTypes.func
+  window: PropTypes.func,
 };
 
 export default MobNavbar;

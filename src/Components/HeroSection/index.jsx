@@ -50,7 +50,7 @@ const HeroSection = () => {
         >
           <motion.h2 variants={textVariants}>Rozy Roshan</motion.h2>
        
-          <motion.h1 variants={textVariants}>Web developer</motion.h1>
+          <motion.h1 variants={textVariants}>SOFTWARE ENGINEER</motion.h1>
           <motion.h3 variants={textVariants}>SKILLS </motion.h3>
           <Typewriter
             options={{
@@ -62,12 +62,6 @@ const HeroSection = () => {
               cursor: " ",
             }}
           />
-          <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
-          </motion.div>
           <motion.img
             variants={textVariants}
             animate="scrollButton"
