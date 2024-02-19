@@ -10,7 +10,7 @@ function About() {
     <div className="about-box">
       <h1>About me</h1>
       <div className="card-container">
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
           <AnimatePresence>
             {aboutContent.map((item) => (
               <Grid key={item.id} item xs={4}>
