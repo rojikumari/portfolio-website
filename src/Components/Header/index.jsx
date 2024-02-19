@@ -15,9 +15,26 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { keyframes } from "@mui/system";
+
+const bounceAnimation = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+`;
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Project", "Contact"];
+const navItems = [
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "Projects", path: "/projects" },
+  { label: "Skills", path: "/skills" },
+  { label: "Contact", path: "/contact" },
+];
 
 function MobNavbar(props) {
   const { window } = props;
@@ -40,10 +57,14 @@ function MobNavbar(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.label} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText
-                primary={item}
+                primary={
+                  <Link to={item.path} className={styles.link}>
+                    {item.label}
+                  </Link>
+                }
                 sx={{
                   color: "#f7f7fc",
                   fontSize: "12px",
@@ -66,7 +87,9 @@ function MobNavbar(props) {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ backgroundImage: "linear-gradient(to right, #000000, #96b0cd)" }}
+        sx={{
+          backgroundImage: "linear-gradient(to right, #4f0629, #a995aa)",
+        }}
       >
         <Toolbar>
           <IconButton
@@ -86,6 +109,8 @@ function MobNavbar(props) {
             sx={{
               flexGrow: 1,
               display: { xs: "none", sm: "block", color: "#acacad" },
+              textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+              animation: `${bounceAnimation} 1s ease infinite`,
             }}
           >
             R-Portfolio
@@ -93,15 +118,22 @@ function MobNavbar(props) {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
-                key={item}
+                key={item.label}
                 sx={{
                   color: "#f7f7fc",
                   fontSize: "16px",
                   fontWeight: "600",
                   textTransform: "capitalize",
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+                  // transition: "color 0.3s ease-in-out", // Adding a transition for color change
+                  "&:hover": {
+                    scale: "1.1",
+                  },
                 }}
               >
-                {item}
+                <Link to={item.path} className={styles.link}>
+                  {item.label}
+                </Link>
               </Button>
             ))}
           </Box>
@@ -121,14 +153,14 @@ function MobNavbar(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
-              backgroundColor: "black",
+              backgroundImage: "linear-gradient(to right, #4f0629, #a995aa)",
             },
           }}
         >
           {drawer}
         </Drawer>
       </nav>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main" sx={{ p: 0 }}>
         <Toolbar />
       </Box>
     </Box>
