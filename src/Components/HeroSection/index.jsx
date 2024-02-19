@@ -1,6 +1,7 @@
 import "./herosection.scss";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import React,{useState, useEffect} from "react"
 
 const textVariants = {
   initial: {
@@ -39,6 +40,22 @@ const sliderVariants = {
 };
 
 const HeroSection = () => {
+  const images = ["/rozy.jpg", "https://images.unsplash.com/photo-1704494918677-d8cbef9f0dd5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1707962688729-fa3e0b968d4b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"];
+  
+  // State to track the index of the current image
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    // Function to change the image every 3 seconds
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    // Cleanup function to clear the interval when component unmounts
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <div className="hero">
       <div className="wrapper">
@@ -79,7 +96,7 @@ const HeroSection = () => {
         WEB DEVELOPER
       </motion.div>
       <div className="imageContainer">
-        <img src="/rozy.jpg" alt="" />
+        <img src={images[currentImageIndex]} alt="" />
       </div>
     </div>
   );
