@@ -4,6 +4,19 @@ import Image3 from "../../Assets/code.png";
 import Image4 from "../../Assets/image1.png";
 import Image5 from "../../Assets/reactjs.png";
 import Image6 from "../../Assets/reactjsui.png";
+import logo1 from "../../Assets/react-logo.png"
+import logo2 from "../../Assets/Gatsby-logo.png"
+import logo3 from "../../Assets/next-logo.png"
+import logo4 from "../../Assets/github-logo.png"
+import logo5 from "../../Assets/Bootstrap-logo.png"
+import logo6 from "../../Assets/Material-UI.png"
+import logo7 from "../../Assets/html-logo.png"
+import logo8 from "../../Assets/css-logo.png"
+import logo9 from "../../Assets/javascript-logo.png"
+import logo10 from "../../Assets/java-logo.png"
+import logo11 from "../../Assets/vercel-logo.png"
+import logo12 from "../../Assets/netlify-logo.png"
+
 export const aboutContent = [
   {
     id: 1,
@@ -76,3 +89,66 @@ export const items = [
       issues.`,
   },
 ];
+
+export const techStack = [
+  {
+    id: 1,
+    tech: "ReactJs",
+    img: logo1,
+  },
+  {
+    id: 2,
+    tech: "NextJs",
+    img: logo3
+  },
+  {
+    id: 3,
+    tech: "HTML",
+    img: logo7
+  },
+  {
+    id: 4,
+    tech: "CSS",
+    img: logo8
+  },
+  {
+    id: 5,
+    tech: "JavaScript",
+    img: logo9
+  },
+  {
+    id: 10,
+    tech: "Java",
+    img: logo10
+  },
+  {
+    id: 6,
+    tech: "Gatsby",
+    img: logo2
+  },
+  {
+    id: 7,
+    tech: "Git/Github",
+    img: logo4
+  },
+  {
+    id: 8,
+    tech: "Vercel",
+    img: logo11
+  },
+  {
+    id: 9,
+    tech: "Netlify",
+    img: logo12
+  },
+  {
+    id: 11,
+    tech: "Material UI",
+    img: logo6,
+  },
+  {
+    id: 12,
+    tech: "Bootstrap",
+    img: logo5,
+  }
+]
