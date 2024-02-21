@@ -2,10 +2,12 @@ import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const variants = {
   initial: {
-    y: 500,
+    y: 300,
     opacity: 0,
   },
   animate: {
@@ -38,7 +40,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          setSuccess(true)
+          setSuccess(true);
         },
         (error) => {
           setError(true);
@@ -65,8 +67,25 @@ const Contact = () => {
           <span>+918766859398</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
-          <h2>Phone</h2>
-          <span>+918766859398</span>
+          <h2>Github</h2>
+          <a
+            href="https://github.com/rojikumari"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitHubIcon sx={{color: "#4f0629"}}/>
+          </a>
+        </motion.div>
+        <motion.div className="item" variants={variants}>
+          <h2>Linkedin</h2>
+          <a
+            href="https://www.linkedin.com/in/rozy-roshan-9b55a7213/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon sx={{color: "#4f0629"}}/>
+          </a>
+       
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -106,9 +125,9 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
-          <input type="text" required placeholder="Name" name="name"/>
-          <input type="email" required placeholder="Email" name="email"/>
-          <textarea rows={8} placeholder="Message" name="message"/>
+          <input type="text" required placeholder="Name" name="name" />
+          <input type="email" required placeholder="Email" name="email" />
+          <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
           {error && "Error"}
           {success && "Success"}

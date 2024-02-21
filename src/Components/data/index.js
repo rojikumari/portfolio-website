@@ -58,7 +58,7 @@ export const items = [
   {
     id: 1,
     title: "Bitetime",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://img.freepik.com/free-vector/flat-human-hands-hold-smartphone-with-mobile-app-ordering-fast-food-home-take-away-online-service-order-asian-italian-meals-pizza-burger-wok-box-with-noodles-delivery_88138-804.jpg?w=996&t=st=1708549616~exp=1708550216~hmac=cea3d4ce98f14e271e3c5e7a6c1f78ef06967124a36a44f6a080cb721cbfbb56",
     desc: " NextJs, Reactjs, Material UI, html, css, javascript, formik",
     para: `Bitetime has two panels: Admin and customer panel. Online platform for ordering food: user registration, menu
       browsing, cart management, secure payment processing, order tracking, delivery scheduling, restaurant ratings, and
@@ -67,14 +67,14 @@ export const items = [
   {
     id: 2,
     title: "Spectre Capital",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://img.freepik.com/free-photo/ai-human-technology-background_1409-5588.jpg?t=st=1708534652~exp=1708538252~hmac=bb469a32a9adb7287d0e6b344347b18beaad8798ac51b00fdf52c7c2dade1407&w=826",
     desc: " NextJs, Material UI, html, css, javascript",
     para: "",
   },
   {
     id: 3,
     title: "Simplee",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    img: "https://img.freepik.com/free-vector/realtor-male-assistant-illustrated_23-2148671323.jpg?w=826&t=st=1708549397~exp=1708549997~hmac=1977fac155458ea89a5706b8616ed0c43123455141af01ef5556b9b8e5c8e603",
     desc: " NextJs, ReactJs, Material UI, formik, google street map, html, css, javascript, redux",
     para: `Simplee is a real Estate Web Application it has a three panels: Admin, Sponsor and investor panel. user can manage
       their investment and Net Operating Income with graphical data as well as Tables with Multifilter functionality`,
@@ -82,7 +82,7 @@ export const items = [
   {
     id: 4,
     title: "IT tracking",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    img: "https://img.freepik.com/free-vector/tired-exhausted-woman-working-laptop-feeling-burnout-vector-illustration-overload-overwork-fatigue-concept_74855-10178.jpg?w=740&t=st=1708549296~exp=1708549896~hmac=b21d7c1f7b17d1cdfaf1c780bedc18d9a62096c416cc2dc58fdb41fd71e6b90e",
     desc: " NextJs, ReactJs, redux, Material UI, formik, html, css, javascript, ckeditor",
     para: `IT tracking system has two panel: Admin and user Panel.It is one-stop solution that will help the IT team track issues
       raised by employees. It helps to keep the track of the concerns raised by the employees related to Software or Hardware
