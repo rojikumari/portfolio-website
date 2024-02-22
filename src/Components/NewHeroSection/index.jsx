@@ -40,14 +40,14 @@ const Banner = () => {
             <motion.h1
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 3 }}
             >
               Welcome to My Website
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 1 }}
+              transition={{ duration: 0.5, delay: 3 }}
             >
               I'm <span>Rozy</span>, a passionate web developer.
             </motion.p>
@@ -89,7 +89,7 @@ const Banner = () => {
                 className="tech-image"
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5, delay: 3 }}
               />
             </div>
           </div>
@@ -105,7 +105,7 @@ const Banner = () => {
             className="hero-img"
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 2 }}
+            transition={{ duration: 0.5, delay: 1 }}
           >
             <img src={Rozy} alt="rozy" />
           </motion.div>
