@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .banner-container {
   background-image: url("../../Assets/banner-bg2.jpg");
   background-size: cover;
@@ -15,6 +17,16 @@
         left: 12vh;
         top: 10vh;
         text-align: center;
+        @include mobile {
+          left: 0;
+          top: 0;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background: rgb(7 7 7 / 72%);
+        }
 
         h1 {
           font-size: 8vh;
@@ -22,24 +34,37 @@
           font-size: 800;
           color: #dbcccc;
           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          @include mobile {
+            font-size: 6vh;
+          }
         }
         span {
           font-size: 4vh;
           font-weight: 600;
           color: #989595;
           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          @include mobile {
+            font-size: 3vh;
+          }
         }
         p {
-            margin-top: 1rem;
+          margin-top: 1rem;
           font-size: 4vh;
           font-weight: 600;
           color: #dbcccc;
           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          @include mobile {
+            font-size: 3vh;
+          }
         }
       }
       .hero-img {
         display: flex;
         justify-content: flex-end;
+        @include mobile {
+          justify-content: center;
+          margin-top: 3rem;
+        }
         img {
           height: 100vh;
         }
@@ -57,6 +82,9 @@
   width: 50%;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  @include mobile {
+    font-size: 16vh;
+  }
 }
 .Typewriter {
   font-size: 6vh;
@@ -66,21 +94,22 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .tech-stack-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        box-shadow: 0 4px 10px rgba(250, 247, 247, 0.718), 0 6px 20px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(250, 247, 247, 0.718),
+      0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 40px rgba(0, 0, 0, 0.3);
-        }
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 40px rgba(0, 0, 0, 0.3);
     }
+  }
 }

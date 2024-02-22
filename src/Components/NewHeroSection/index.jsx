@@ -14,12 +14,12 @@ const sliderVariants = {
     transition: {
       repeat: Infinity,
       repeatType: "mirror",
-      duration: 20,
+      duration: 10,
     },
   },
 };
 
-function Banner() {
+const Banner = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -31,15 +31,26 @@ function Banner() {
 
     return () => clearInterval(intervalId);
   }, []);
+
   return (
     <div className="banner-container">
       <div className="banner-content">
         <div className="banner-box">
           <div className="content-box">
-            <h1>Welcome to My Website</h1>
-            <p>
-              I'm <span>Rozy</span> , a passionate web developer.
-            </p>
+            <motion.h1
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              Welcome to My Website
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+            >
+              I'm <span>Rozy</span>, a passionate web developer.
+            </motion.p>
             <Typewriter
               options={{
                 strings: [
@@ -54,19 +65,31 @@ function Banner() {
                   "VERCEL",
                   "NETLIFY",
                   "MATERIAL UI",
-                  "BOOTSTRAP"
+                  "BOOTSTRAP",
                 ],
                 autoStart: true,
                 loop: true,
                 wrapperClassName: "typewriter-wrapper",
                 cursor: " ",
               }}
+              onInit={(typewriter) => {
+                typewriter
+                  .changeDelay(100)
+                  .pauseFor(1000)
+                  .deleteChars(25)
+                  .pauseFor(500)
+                  .deleteAll()
+                  .start();
+              }}
             />
             <div className="tech-stack-container">
-              <img
+              <motion.img
                 src={techStack[currentImageIndex].img}
                 alt="tech-stack"
                 className="tech-image"
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
               />
             </div>
           </div>
@@ -78,13 +101,18 @@ function Banner() {
           >
             WEB DEVELOPER
           </motion.div>
-          <div className="hero-img">
+          <motion.div
+            className="hero-img"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 2 }}
+          >
             <img src={Rozy} alt="rozy" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Banner;

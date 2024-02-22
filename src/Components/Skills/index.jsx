@@ -17,7 +17,7 @@ function SkillCard({ item }) {
     }, [controls, inView]);
   
     return (
-      <Grid item xs={3} className="skill-card-box" ref={ref}>
+      <Grid item xs={6} md={4} lg={3} className="skill-card-box" ref={ref}>
         <motion.div
           className="skill-card-container"
           initial={{ x: "-100vw", opacity: 0 }}
@@ -40,7 +40,7 @@ function Skills() {
     <div className="skill-box">
       <h1>Skills</h1>
       <div className="skill-card">
-        <Grid container xs={8} spacing={3}>
+        <Grid container xs={12} lg={8} spacing={3}>
           {techStack.map((item) => (
             <SkillCard key={item.id} item={item} />
           ))}

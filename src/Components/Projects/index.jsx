@@ -1,9 +1,10 @@
 import React from "react";
 import "./project.scss";
-import { Grid } from "@mui/material";
+import { Grid, Button } from "@mui/material";
 import { items } from "../data";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
 
 function ProjectCard({ item }) {
   const controls = useAnimation();
@@ -30,7 +31,7 @@ function ProjectCard({ item }) {
         <h2>{item.title}</h2>
       </Grid>
       <Grid
-      container
+        container
         className="img-card"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -38,7 +39,7 @@ function ProjectCard({ item }) {
         component={motion.div}
         whileHover={{ rotate: [0, 5, -5, 5, 0], transition: { duration: 0.5 } }}
       >
-        <Grid item xs={6} className="image-box">
+        <Grid item xs={12} md={6} className="image-box">
           <motion.img
             src={item.img}
             alt="project-Img"
@@ -47,7 +48,7 @@ function ProjectCard({ item }) {
             transition={{ duration: 0.8 }}
           />
         </Grid>
-        <Grid item xs={6} className="content-box">
+        <Grid item xs={12} md={6} className="content-box">
           <div>
             <p>{item.para}</p>
             <br />
@@ -67,12 +68,13 @@ function Projects() {
     <div className="project-box">
       <h1>Projects</h1>
       <div className="project-card">
-        <div>
+        <div className="project-card-box">
           {items.map((item) => (
             <ProjectCard key={item.id} item={item} />
           ))}
         </div>
       </div>
+
     </div>
   );
 }
