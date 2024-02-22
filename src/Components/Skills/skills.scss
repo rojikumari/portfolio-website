@@ -1,5 +1,5 @@
 .skill-box {
-  background-color: #a995aa;
+  background-color: #9a9a9a;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +30,7 @@
         flex-direction: column;
         gap: 16px;
         padding: 16px;
-        background-image: linear-gradient(to right, #4f0629, #a995aa);
+        background-image: linear-gradient(to right, #060606, #646464);
         perspective: 1000px; /* Define a perspective for the 3D effect */
         position: relative;
         .img-box {

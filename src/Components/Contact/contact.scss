@@ -1,5 +1,16 @@
 @import "../../app.scss";
 
+.contact-heading {
+  text-align: center;
+  font-size: 7vh;
+  line-height: 62px;
+  color: #fcf3f3;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
 .contact {
   height: 100%;
   max-width: 1200px;
@@ -9,6 +20,7 @@
   gap: 50px;
   padding: 20px;
   margin-top: 2rem;
+
 
   //   background-image: linear-gradient(to right, #4f0629, #a995aa);
 
@@ -34,8 +46,8 @@
     h1 {
       font-size: 70px;
       line-height: 88px;
-      color: #fcf3f3;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      color: black;
+      text-shadow: 2px 2px 4px rgba(215, 213, 213, 0.934);
 
       @include mobile {
         font-size: 36px;
@@ -51,8 +63,8 @@
     span {
       font-size: 12px;
       font-weight: 300;
-      color: #fcf3f3;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      color: black;
+      text-shadow: 2px 2px 4px rgba(215, 213, 213, 0.934);
     }
   }
 
@@ -67,7 +79,7 @@
     }
 
     .phoneSvg {
-      stroke: #4f0629;
+      stroke: #060606;
       position: absolute;
       margin: auto;
       z-index: -1;
@@ -94,7 +106,7 @@
       button {
         padding: 23px;
         border: none;
-        background-color: #4f0629;
+        background-color: #060606;
         color: #fcf3f3;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         cursor: pointer;

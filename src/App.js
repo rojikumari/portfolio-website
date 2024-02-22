@@ -6,13 +6,15 @@ import About from "./Components/About";
 import Project from "./Components/Projects";
 import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
+import Banner from "./Components/NewHeroSection";
 
 function App() {
   return (
     <div>
       <section id="home">
         <Header />
-        <HeroSection />
+        <Banner/>
+        {/* <HeroSection /> */}
       </section>
       <section id="about">
         <About />

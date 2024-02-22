@@ -104,7 +104,7 @@ function MobNavbar(props) {
       <AppBar
         component="nav"
         sx={{
-          backgroundImage: "linear-gradient(to right, #4f0629, #a995aa)",
+          background: "#000000"
         }}
       >
         <Toolbar>
@@ -175,7 +175,7 @@ function MobNavbar(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
-              backgroundImage: "linear-gradient(to right, #4f0629, #a995aa)",
+              background: "#000000"
             },
           }}
         >

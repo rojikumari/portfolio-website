@@ -5,6 +5,7 @@ import { Grid } from "@mui/material";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+
 function SkillCard({ item }) {
     const controls = useAnimation();
     const { ref, inView } = useInView();

@@ -1,12 +1,12 @@
 .project-box {
-  background-color: #a995aa;
+  background-color: #9a9a9a;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   h1 {
     text-align: center;
-    font-size: 60px;
+    font-size: 7vh;
     line-height: 62px;
     color: #fcf3f3;
     letter-spacing: 5px;
@@ -19,7 +19,7 @@
     .project-card-container {
       h2 {
         font-size: 45px;
-        color: linear-gradient(to right, #4f0629, #a995aa);
+        color: linear-gradient(to right, #060606, #646464);
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         margin-top: 2rem;
       }
@@ -34,7 +34,7 @@
         }
       }
       .img-card {
-         background-image: linear-gradient(to right, #4f0629, #a995aa);
+         background-image: linear-gradient(to right, #060606, #646464);
          margin-top: 2rem;
          border-radius: 4px;
          perspective: 1000px;

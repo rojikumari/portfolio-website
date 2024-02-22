@@ -1,0 +1,86 @@
+.banner-container {
+  background-image: url("../../Assets/banner-bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 10px);
+  overflow: hidden;
+  position: relative;
+  .banner-content {
+    .banner-box {
+      .content-box {
+        padding: 30px;
+        position: absolute;
+        background: rgb(255 255 255 / 7%);
+        border-radius: 50px 8px;
+        left: 12vh;
+        top: 10vh;
+        text-align: center;
+
+        h1 {
+          font-size: 8vh;
+          text-transform: uppercase;
+          font-size: 800;
+          color: #dbcccc;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        span {
+          font-size: 4vh;
+          font-weight: 600;
+          color: #989595;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            margin-top: 1rem;
+          font-size: 4vh;
+          font-weight: 600;
+          color: #dbcccc;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+      }
+      .hero-img {
+        display: flex;
+        justify-content: flex-end;
+        img {
+          height: 100vh;
+        }
+      }
+    }
+  }
+}
+.slidingTextContainer {
+  position: absolute;
+  font-size: 30vh;
+  bottom: -25px;
+  white-space: nowrap;
+  z-index: 1000;
+  color: hsla(180, 17%, 98%, 0.732);
+  width: 50%;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.Typewriter {
+  font-size: 6vh;
+  font-weight: 600;
+  letter-spacing: 10px;
+  color: #dbcccc;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.tech-stack-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 10px rgba(250, 247, 247, 0.718), 0 6px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
