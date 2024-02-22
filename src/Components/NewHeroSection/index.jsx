@@ -107,6 +107,7 @@ const Banner = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
           >
+          
             <img src={Rozy} alt="rozy" />
           </motion.div>
         </div>
