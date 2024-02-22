@@ -1,5 +1,5 @@
 .about-box {
-    background:  #a995aa;
+    background:  #9a9a9a;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
     }
     h1 {
         text-align: center;
-        font-size: 60px;
+        font-size: 7vh;
         line-height: 62px;
         color: #fcf3f3;
         letter-spacing: 5px;
@@ -19,14 +19,14 @@
         padding-top: 3rem;
     }
     .card {
-        border: 1px solid #ccc;
+        border: 1px solid #646464;
         border-radius: 8px;
         overflow: hidden;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 20px auto;
         position: relative;
         transition: transform 0.3s;
-        background-color: #4f0629;
+        background-color: #060606;
     
         &:hover {
           transform: translateY(-5px);

@@ -1,0 +1,126 @@
+@import "../../app.scss";
+
+.contact-heading {
+  text-align: center;
+  font-size: 7vh;
+  line-height: 62px;
+  color: #fcf3f3;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  @include mobile {
+    padding-bottom: 0px;
+  }
+}
+
+.contact {
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+ 
+
+
+  //   background-image: linear-gradient(to right, #4f0629, #a995aa);
+
+  @include mobile {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mobile {
+      gap: 20px;
+      text-align: center;
+      align-items: center;
+      // margin-top: 70px;
+    }
+
+    h1 {
+      font-size: 70px;
+      line-height: 88px;
+      color: black;
+      text-shadow: 2px 2px 4px rgba(215, 213, 213, 0.934);
+
+      @include mobile {
+        font-size: 36px;
+        line-height: unset;
+      }
+    }
+    h2 {
+      font-size: 16px;
+      font-weight: 300;
+      color: #fcf3f3;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 300;
+      color: black;
+      text-shadow: 2px 2px 4px rgba(215, 213, 213, 0.934);
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+    margin-top: 1rem;
+
+    @include mobile {
+      padding: 0px;
+      width: 100%;
+    }
+
+    .phoneSvg {
+      stroke: #060606;
+      position: absolute;
+      margin: auto;
+      z-index: -1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+
+        @include mobile {
+          padding: 10px;
+        }
+      }
+
+      button {
+        padding: 23px;
+        border: none;
+        background-color: #060606;
+        color: #fcf3f3;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        font-weight: 500;
+        @include mobile {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

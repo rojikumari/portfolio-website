@@ -1,62 +1,82 @@
-import { useRef } from "react";
+import React from "react";
 import "./project.scss";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { Grid, Button } from "@mui/material";
 import { items } from "../data";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
 
+function ProjectCard({ item }) {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
 
-
-const Single = ({ item }) => {
-  const ref = useRef();
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  React.useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, scale: 1 });
+    }
+  }, [controls, inView]);
 
   return (
-    <section >
-      <div className="container">
-        <div className="wrapper">
-          <div className="imageContainer" ref={ref}>
-            <img src={item.img} alt="" />
+    <Grid
+      ref={ref}
+      key={item.id}
+      className="project-card-container"
+      container
+      spacing={3}
+      component={motion.div}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={controls}
+    >
+      <Grid item xs={12} textAlign="center">
+        <h2>{item.title}</h2>
+      </Grid>
+      <Grid
+        container
+        className="img-card"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        component={motion.div}
+        whileHover={{ rotate: [0, 5, -5, 5, 0], transition: { duration: 0.5 } }}
+      >
+        <Grid item xs={12} md={6} className="image-box">
+          <motion.img
+            src={item.img}
+            alt="project-Img"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+          />
+        </Grid>
+        <Grid item xs={12} md={6} className="content-box">
+          <div>
+            <p>{item.para}</p>
+            <br />
+            <p>
+              <span>Tech stack: </span>
+              {item.desc}
+            </p>
           </div>
-          <motion.div className="textContainer" style={{y}}>
-            <h2>{item.title}</h2>
-            <h5>{item.para}</h5>
-            <p>{item.desc}</p>
-            <button>See Demo</button>
-          </motion.div>
+        </Grid>
+      </Grid>
+    </Grid>
+  );
+}
+
+function Projects() {
+  return (
+    <div className="project-box">
+      <h1>Projects</h1>
+      <div className="project-card">
+        <div className="project-card-box">
+          {items.map((item) => (
+            <ProjectCard key={item.id} item={item} />
+          ))}
         </div>
       </div>
-    </section>
-  );
-};
 
-const Project = () => {
-  const ref = useRef();
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end end", "start start"],
-  });
-
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-  });
-
-  return (
-    <div className="portfolio" ref={ref}>
-      <div className="progress">
-        <h1>Projects</h1>
-        <motion.div style={{ scaleX }} className="progressBar"></motion.div>
-      </div>
-      {items.map((item) => (
-        <Single item={item} key={item.id} />
-      ))}
     </div>
   );
-};
+}
 
-export default Project;
+export default Projects;

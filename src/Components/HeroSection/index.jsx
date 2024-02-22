@@ -40,7 +40,7 @@ const sliderVariants = {
 };
 
 const HeroSection = () => {
-  const images = ["/rozy.jpg", "https://images.unsplash.com/photo-1704494918677-d8cbef9f0dd5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", "https://images.unsplash.com/photo-1707962688729-fa3e0b968d4b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"];
+  const images = ["/rozy.jpg", "https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?w=826&t=st=1708550098~exp=1708550698~hmac=6db045bdc12981ea95bb6d05afac1274b1142c0d7f95381f66600cbc745859ad", "https://img.freepik.com/free-photo/glowing-blue-sphere-held-by-human-hand-generated-by-ai_188544-41033.jpg?t=st=1708550217~exp=1708553817~hmac=c34d4145bec1a6781383c362345bbcbbc2a722cf58c450ab9fa08597a38c3cae&w=996"];
   
   // State to track the index of the current image
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

@@ -13,7 +13,7 @@ function About() {
         <Grid container spacing={3}>
           <AnimatePresence>
             {aboutContent.map((item) => (
-              <Grid key={item.id} item xs={4}>
+              <Grid key={item.id} item xs={12} md={6} lg={4}>
                 <InViewWrapper>
                   {(isVisible) => (
                     <motion.div

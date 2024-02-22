@@ -17,6 +17,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import { keyframes } from "@mui/system";
+import { motion } from "framer-motion";
 
 const bounceAnimation = keyframes`
   0%, 100% {
@@ -26,14 +27,23 @@ const bounceAnimation = keyframes`
     transform: translateY(-3px);
   }
 `;
-
+const itemVariants = {
+  open: {
+    y: 0,
+    opacity: 1,
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+  },
+};
 const drawerWidth = 240;
 const navItems = [
   { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
-  { label: "Projects", path: "/projects" },
-  { label: "Skills", path: "/skills" },
-  { label: "Contact", path: "/contact" },
+  { label: "About", path: "#about" },
+  { label: "Projects", path: "#projects" },
+  { label: "Skills", path: "#skills" },
+  { label: "Contact", path: "#contact" },
 ];
 
 function MobNavbar(props) {
@@ -61,9 +71,15 @@ function MobNavbar(props) {
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText
                 primary={
-                  <Link to={item.path} className={styles.link}>
+                  <motion.a
+                    href={item.path}
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={styles.link}
+                  >
                     {item.label}
-                  </Link>
+                  </motion.a>
                 }
                 sx={{
                   color: "#f7f7fc",
@@ -88,7 +104,7 @@ function MobNavbar(props) {
       <AppBar
         component="nav"
         sx={{
-          backgroundImage: "linear-gradient(to right, #4f0629, #a995aa)",
+          background: "#000000"
         }}
       >
         <Toolbar>
@@ -131,9 +147,15 @@ function MobNavbar(props) {
                   },
                 }}
               >
-                <Link to={item.path} className={styles.link}>
+                <motion.a
+                  href={item.path}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={styles.link}
+                >
                   {item.label}
-                </Link>
+                </motion.a>
               </Button>
             ))}
           </Box>
@@ -153,7 +175,7 @@ function MobNavbar(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
-              backgroundImage: "linear-gradient(to right, #4f0629, #a995aa)",
+              background: "#000000"
             },
           }}
         >
